@@ -1,0 +1,105 @@
+{
+  "theme_and_archetype": {
+    "theme": "LIGHT",
+    "archetype": "1 (Organic & Earthy)",
+    "description": "Warm, human, dignified, editorial, unhurried. A compassion-forward brand with no AI-slop patterns."
+  },
+  "typography": {
+    "heading_font": "Cormorant Garamond",
+    "body_font": "Lora",
+    "rules": [
+      "Use Cormorant Garamond (or Playfair Display) for all headings to establish an elegant, high-end editorial feel.",
+      "Use Lora for body text to maintain a warm, readable, humanist tone.",
+      "Headlines (Size > 32px): MUST use tracking-tight or tracking-tighter.",
+      "Copy is poetic. Use lots of short line breaks—typography and rhythm matter enormously.",
+      "Avoid generic fonts like Inter, Roboto, or Syne entirely."
+    ]
+  },
+  "colors": {
+    "primary": "#2A3B2C",
+    "secondary": "#9DA993",
+    "accent_terracotta": "#D47A62",
+    "accent_ochre": "#DDA77B",
+    "background_base": "#F9F6F0",
+    "text_main": "#2A3B2C",
+    "text_muted": "#5C6B5E",
+    "rules": [
+      "No cold blues or purples. Do NOT use purple gradients.",
+      "Use the Soft Ivory / Cream (#F9F6F0) as the primary canvas.",
+      "Deep Forest (#2A3B2C) for text ensures high contrast while remaining earthy."
+    ]
+  },
+  "layout_and_spacing": {
+    "philosophy": "Generous Spacing, Editorial, Unhurried.",
+    "rules": [
+      "Use generous padding like py-24, py-32 for sections to give content room to breathe.",
+      "Negative space is highly valued. Do not cram elements.",
+      "Use subtle asymmetry and overlapping image/text blocks.",
+      "Always left-align dense copy for readability, but allow center-alignment for poetic, short, reverent statements."
+    ]
+  },
+  "components": {
+    "buttons": "Pill-shaped or softly rounded (rounded-full or rounded-2xl). Avoid harsh square edges. Primary buttons in Deep Forest or Terracotta. Include a subtle ripple hover effect.",
+    "forms": "The volunteer registration must feel like a 'virtual journey', not a plain form. Use fading transitions between steps, large typography, encouraging microcopy, and a dot-based progress indicator.",
+    "cards": "Avoid generic card grids with borders and drop shadows. Use clean, borderless images with text neatly aligned below or to the side. Apply a subtle image zoom on hover.",
+    "icons": "Use lucide-react for minimal, organic icons. Keep stroke width fine (1-1.25px).",
+    "data_testid": "All interactive and key informational elements MUST include a data-testid attribute (kebab-case, role-based)."
+  },
+  "motion_and_interactions": {
+    "ripple_motif": "Weave the 'ripple' motif visually using circular concentric waves and gentle expanding animations across the site as a visual thread.",
+    "page_transitions": "Soft fade-ins. Unhurried reveals on scroll using framer-motion.",
+    "hover_states": "Text links should have a gentle underline fade-in. Images should have a very slight, slow scale (e.g., duration 0.7s) to feel cinematic."
+  },
+  "pages_specifics": {
+    "home": {
+      "sections": [
+        "Hero: Full bleed soft image overlay (use water ripples) with Cormorant Garamond text.",
+        "Every Ripple Begins Somewhere: Text-heavy, editorial layout with beautiful typesetting.",
+        "The Kamala Muditam Way",
+        "Where Our Hearts Lead Us: Grid/List of 10 focus areas, utilizing high-end editorial bento layout or asymmetric list.",
+        "How We Walk Alongside: Highlight Restore / Rise / Ripple initiatives.",
+        "Become Part of the Journey: Teaser for the volunteer journey.",
+        "Ripples: Stories preview.",
+        "The Ripple Promise: Ends quietly, no CTA. A reverent, peaceful closing moment."
+      ]
+    },
+    "volunteer_journey": {
+      "steps": ["About You", "Your Heart", "Walk Alongside", "Your Journey"],
+      "ux": "Multi-step onboarding. ~3 min completion. Progress bar showing steps with dots. Celebratory success screen."
+    },
+    "focus_areas": {
+      "structure": "Our Heart / How We Walk Alongside / Join This Journey"
+    },
+    "ripples": {
+      "layout": "Categorized story cards, editorial magazine layout with beautiful typography."
+    },
+    "people_behind_the_ripple": {
+      "layout": "Team roster categorized: Founders, Trustees, Advisors, Ripple Makers, Rise Fellows, Restore Circle Partners, Community Partners."
+    },
+    "admin": {
+      "layout": "Simple, password-protected admin panel to view volunteer and contact submissions."
+    }
+  },
+  "media": {
+    "hero_water_ripples": [
+      "https://images.pexels.com/photos/9302825/pexels-photo-9302825.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "https://images.pexels.com/photos/31729467/pexels-photo-31729467.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    ],
+    "community_hands": [
+      "https://images.pexels.com/photos/297997/pexels-photo-297997.jpeg",
+      "https://images.pexels.com/photos/7111462/pexels-photo-7111462.jpeg"
+    ],
+    "maternal_care": [
+      "https://images.pexels.com/photos/31189942/pexels-photo-31189942.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "https://images.pexels.com/photos/51953/mother-daughter-love-sunset-51953.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    ],
+    "volunteers": [
+      "https://images.pexels.com/photos/6647025/pexels-photo-6647025.jpeg",
+      "https://images.pexels.com/photos/6647020/pexels-photo-6647020.jpeg"
+    ],
+    "environment": [
+      "https://images.pexels.com/photos/12695823/pexels-photo-12695823.jpeg",
+      "https://images.pexels.com/photos/7023474/pexels-photo-7023474.jpeg"
+    ]
+  }
+}
