@@ -13,17 +13,9 @@ Home, Our Journey, The Kamala Muditam Way, Where Our Hearts Lead Us (10 focus ar
 
 ## Architecture
 
-### Backend — FastAPI + MongoDB
-Routes (all under `/api`):
-- POST `/volunteers` — create volunteer
-- POST `/contact` — create contact message
-- POST `/admin/login` — returns bearer token (in-memory session)
-- POST `/admin/logout`
-- GET `/admin/volunteers` — auth required
-- GET `/admin/contacts` — auth required
-- GET `/admin/stats` — auth required
-
-Env: `ADMIN_USERNAME`, `ADMIN_PASSWORD` in `/app/backend/.env`.
+### Backend — REMOVED
+The site is now purely static. Form submissions open the user's email client via `mailto:` links.
+Recipient address is configured in `/app/frontend/src/lib/mailto.js` (`RECIPIENT_EMAIL`).
 
 ### Frontend — React + React Router + Tailwind + shadcn UI + framer-motion + sonner
 - Routes: `/`, `/our-journey`, `/the-kamala-muditam-way`, `/where-our-hearts-lead-us`, `/where-our-hearts-lead-us/:slug`, `/how-we-walk-alongside`, `/become-part-of-the-journey`, `/ripples`, `/the-people-behind-the-ripple`, `/contact`, `/admin`.

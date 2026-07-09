@@ -3,7 +3,7 @@ import { ArrowRight, Check } from "lucide-react";
 import { toast } from "sonner";
 import RippleMotif from "@/components/RippleMotif";
 import { Section, Eyebrow, H1, H2, Lead, Body } from "@/components/UI";
-import { submitContact } from "@/lib/api";
+import { buildContactMailto, openMailto } from "@/lib/mailto";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -24,7 +24,7 @@ export default function Contact() {
     form.subject.trim() &&
     form.message.trim();
 
-  const onSubmit = async (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
     if (!valid) {
       toast.error("Please fill in the required fields.");
@@ -32,11 +32,12 @@ export default function Contact() {
     }
     try {
       setSending(true);
-      await submitContact(form);
+      const href = buildContactMailto(form);
+      openMailto(href);
       setDone(true);
       setForm({ name: "", email: "", phone: "", subject: "", message: "" });
     } catch (err) {
-      toast.error(err?.response?.data?.detail || "Something went wrong.");
+      toast.error("Could not open your email client.");
     } finally {
       setSending(false);
     }
@@ -73,7 +74,8 @@ export default function Contact() {
               </div>
               <H2 className="mb-4">Thank you for reaching out.</H2>
               <Lead className="mb-8">
-                Your message has quietly become a ripple. Our team will respond soon.
+                Your message just opened in your email app. Send it, and it will
+                quietly become a ripple. Our team will respond soon.
               </Lead>
               <button
                 onClick={() => setDone(false)}
@@ -123,7 +125,7 @@ export default function Contact() {
                   disabled={sending || !valid}
                   className="btn-ripple inline-flex items-center gap-2 bg-[color:var(--forest)] disabled:opacity-50 text-[color:var(--ivory)] rounded-full px-8 py-4 text-sm hover:bg-[color:var(--terracotta)]"
                 >
-                  {sending ? "Sending..." : "Start a Ripple"} <ArrowRight size={16} />
+                  {sending ? "Opening email..." : "Start a Ripple"} <ArrowRight size={16} />
                 </button>
               </div>
             </form>

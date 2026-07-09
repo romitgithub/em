@@ -14,7 +14,6 @@ import JoinJourney from "@/pages/JoinJourney";
 import Ripples from "@/pages/Ripples";
 import People from "@/pages/People";
 import Contact from "@/pages/Contact";
-import Admin from "@/pages/Admin";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -22,33 +21,6 @@ function ScrollToTop() {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, [pathname]);
   return null;
-}
-
-function Shell() {
-  const { pathname } = useLocation();
-  const hideChrome = pathname.startsWith("/admin");
-  return (
-    <>
-      {!hideChrome && <Nav />}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/our-journey" element={<OurJourney />} />
-        <Route path="/the-kamala-muditam-way" element={<KamalaMuditamWay />} />
-        <Route path="/where-our-hearts-lead-us" element={<WhereOurHearts />} />
-        <Route
-          path="/where-our-hearts-lead-us/:slug"
-          element={<FocusArea />}
-        />
-        <Route path="/how-we-walk-alongside" element={<HowWeWalk />} />
-        <Route path="/become-part-of-the-journey" element={<JoinJourney />} />
-        <Route path="/ripples" element={<Ripples />} />
-        <Route path="/the-people-behind-the-ripple" element={<People />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/admin" element={<Admin />} />
-      </Routes>
-      {!hideChrome && <Footer />}
-    </>
-  );
 }
 
 function App() {
@@ -67,7 +39,23 @@ function App() {
             },
           }}
         />
-        <Shell />
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/our-journey" element={<OurJourney />} />
+          <Route path="/the-kamala-muditam-way" element={<KamalaMuditamWay />} />
+          <Route path="/where-our-hearts-lead-us" element={<WhereOurHearts />} />
+          <Route
+            path="/where-our-hearts-lead-us/:slug"
+            element={<FocusArea />}
+          />
+          <Route path="/how-we-walk-alongside" element={<HowWeWalk />} />
+          <Route path="/become-part-of-the-journey" element={<JoinJourney />} />
+          <Route path="/ripples" element={<Ripples />} />
+          <Route path="/the-people-behind-the-ripple" element={<People />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

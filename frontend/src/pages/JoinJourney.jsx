@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import RippleMotif from "@/components/RippleMotif";
 import { Eyebrow, H1, H2, H3, Lead, Body, Button } from "@/components/UI";
 import { focusAreas } from "@/data/focusAreas";
-import { submitVolunteer } from "@/lib/api";
+import { buildVolunteerMailto, openMailto } from "@/lib/mailto";
 
 const CONTRIBUTIONS = [
   "Volunteer my time",
@@ -88,18 +88,19 @@ export default function JoinJourney() {
     return true;
   }, [step, form]);
 
-  const onSubmit = async () => {
+  const onSubmit = () => {
     if (!form.consent) {
       toast.error("Please accept the Ripple pledge to continue.");
       return;
     }
     try {
       setSubmitting(true);
-      await submitVolunteer(form);
+      const href = buildVolunteerMailto(form);
+      openMailto(href);
       setDone(true);
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch (e) {
-      toast.error(e?.response?.data?.detail || "Something went wrong.");
+      toast.error("Could not open your email client.");
     } finally {
       setSubmitting(false);
     }
@@ -416,7 +417,7 @@ export default function JoinJourney() {
               disabled={!canNext || submitting}
               className="btn-ripple inline-flex items-center gap-2 bg-[color:var(--terracotta)] disabled:opacity-50 text-[color:var(--ivory)] rounded-full px-10 py-4 text-sm hover:bg-[color:var(--terracotta-2)]"
             >
-              {submitting ? "Sending..." : "Begin My Journey"} <ArrowRight size={16} />
+              {submitting ? "Opening email..." : "Begin My Journey"} <ArrowRight size={16} />
             </button>
           )}
         </div>
