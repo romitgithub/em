@@ -1,0 +1,32 @@
+{
+  "summary": "First-finish smoke tests for Kamala Muditam nonprofit site. Backend: all 10 API scenarios verified. Frontend: home, focus areas, focus detail page, multi-step Join Journey (submit success), Contact submit, Admin login+dashboard, Ripples category filter, People page, and Footer navigation all working. Admin dashboard confirmed volunteer submitted via UI (UI Test User) and contact via UI (UI Contact).",
+  "tested_scope": ["frontend", "backend", "auth", "integration"],
+  "passed": [
+    "POST /api/volunteers with valid payload -> 200 + id + created_at",
+    "POST /api/volunteers with consent=false (all fields) -> 400 'Consent is required to proceed.'",
+    "POST /api/volunteers with invalid email -> 422",
+    "POST /api/contact -> 200 with saved contact",
+    "POST /api/admin/login (admin/ripple2025) -> 200 with token",
+    "POST /api/admin/login wrong creds -> 401",
+    "GET /api/admin/volunteers without auth -> 401",
+    "GET /api/admin/volunteers with Bearer token -> 200 list",
+    "GET /api/admin/contacts with Bearer token -> 200 list",
+    "GET /api/admin/stats -> {volunteers:1, contacts:2}",
+    "Home page loads with hero + both CTAs; hero-cta-join navigates to /become-part-of-the-journey",
+    "Where Our Hearts Lead Us page renders 10 focus cards; focus-list-children-education navigates to detail",
+    "Focus area detail has 'Our Heart', 'How We Walk Alongside', 'Join This Journey' sections; focus-join-cta navigates with ?focus=children-education",
+    "Join Journey 4-step flow: begin -> Step1 fill -> Step2 focus select -> Step3 contribution -> Step4 story+consent -> submit -> 'Welcome to the Journey' success",
+    "Contact form submit -> contact-success shown",
+    "Admin login -> dashboard shows stats and UI Test User volunteer + contacts",
+    "Ripples category chip cat-maternal-care clickable",
+    "People page renders content matching all 7 group keywords",
+    "Footer link footer-link-contact navigates to /contact"
+  ],
+  "failed": [],
+  "action_items": [
+    "Minor: review request expected data-testid 'input-full-name' etc., but actual code uses underscores like 'input-full_name'. Both work; documentation/test spec mismatch only. Not a bug."
+  ],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "retest_needed": false,
+  "full_testing_deferred": true
+}
