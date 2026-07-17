@@ -32,9 +32,9 @@ function App() {
           position="top-center"
           toastOptions={{
             style: {
-              background: "#3E3229",
-              color: "#F8F2E7",
-              border: "1px solid rgba(248,242,231,0.15)",
+              background: "#2F4632",
+              color: "#EFE7D2",
+              border: "1px solid rgba(239,231,210,0.15)",
               fontFamily: "'Lora', Georgia, serif",
             },
           }}

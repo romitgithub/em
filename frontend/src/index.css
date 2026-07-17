@@ -5,41 +5,41 @@
 @tailwind utilities;
 
 :root {
-  --ivory: #f8f2e7;
-  --ivory-2: #f1e9d9;
-  --forest: #3e3229;
-  --forest-2: #56463c;
-  --sage: #8fa189;
-  --sage-2: #b8c4ac;
-  --terracotta: #b98a96;
-  --terracotta-2: #9c6e7a;
-  --ochre: #c89a50;
-  --text-main: #3e3229;
-  --text-muted: #6b5d53;
-  --line: rgba(62, 50, 41, 0.14);
+  --ivory: #efe7d2;
+  --ivory-2: #e5dbc0;
+  --forest: #2f4632;
+  --forest-2: #3e5741;
+  --sage: #8fa48a;
+  --sage-2: #b4c1af;
+  --terracotta: #b98899;
+  --terracotta-2: #9f6c7e;
+  --ochre: #b78838;
+  --text-main: #2f4632;
+  --text-muted: #6b7a6d;
+  --line: rgba(47, 70, 50, 0.14);
 }
 
 @layer base {
   :root {
-    --background: 39 60% 94%;
-    --foreground: 25 20% 20%;
-    --card: 39 60% 96%;
-    --card-foreground: 25 20% 20%;
-    --popover: 39 60% 96%;
-    --popover-foreground: 25 20% 20%;
-    --primary: 25 20% 20%;
-    --primary-foreground: 39 60% 94%;
-    --secondary: 108 10% 59%;
-    --secondary-foreground: 25 20% 15%;
-    --muted: 40 30% 88%;
-    --muted-foreground: 25 15% 40%;
-    --accent: 348 20% 63%;
-    --accent-foreground: 39 60% 96%;
+    --background: 44 40% 88%;
+    --foreground: 130 20% 23%;
+    --card: 44 40% 90%;
+    --card-foreground: 130 20% 23%;
+    --popover: 44 40% 90%;
+    --popover-foreground: 130 20% 23%;
+    --primary: 130 20% 23%;
+    --primary-foreground: 44 40% 88%;
+    --secondary: 110 12% 60%;
+    --secondary-foreground: 130 20% 18%;
+    --muted: 44 30% 82%;
+    --muted-foreground: 130 8% 40%;
+    --accent: 338 22% 63%;
+    --accent-foreground: 44 40% 90%;
     --destructive: 10 65% 45%;
-    --destructive-foreground: 39 60% 96%;
-    --border: 25 15% 82%;
-    --input: 25 15% 82%;
-    --ring: 25 20% 20%;
+    --destructive-foreground: 44 40% 90%;
+    --border: 44 15% 75%;
+    --input: 44 15% 75%;
+    --ring: 130 20% 23%;
     --radius: 0.75rem;
   }
 }
