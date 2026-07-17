@@ -44,11 +44,11 @@ export default function Nav() {
           data-testid="nav-logo"
           className="flex items-center gap-3 group"
         >
-          <span className="relative w-8 h-8 flex items-center justify-center">
-            <span className="absolute inset-0 rounded-full border border-[color:var(--forest)]" />
-            <span className="absolute inset-1 rounded-full border border-[color:var(--terracotta)] opacity-70" />
-            <span className="absolute inset-2 rounded-full bg-[color:var(--terracotta)]" />
-          </span>
+          <img
+            src="/logo-lotus.webp"
+            alt="Kamala Muditam"
+            className="w-10 h-10 md:w-11 md:h-11 object-contain shrink-0"
+          />
           <span className="font-serif-display text-xl md:text-2xl tracking-tight text-forest">
             Kamala Muditam
           </span>

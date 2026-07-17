@@ -11,11 +11,11 @@ export default function Footer() {
       <div className="mx-auto max-w-[1400px] px-6 md:px-12 py-20 grid gap-14 md:grid-cols-12">
         <div className="md:col-span-5">
           <div className="flex items-center gap-3 mb-6">
-            <span className="relative w-8 h-8 flex items-center justify-center">
-              <span className="absolute inset-0 rounded-full border border-[color:var(--ivory)]" />
-              <span className="absolute inset-1 rounded-full border border-[color:var(--terracotta)] opacity-80" />
-              <span className="absolute inset-2 rounded-full bg-[color:var(--terracotta)]" />
-            </span>
+            <img
+              src="/logo-lotus.webp"
+              alt="Kamala Muditam"
+              className="w-11 h-11 object-contain"
+            />
             <span className="font-serif-display text-2xl">Kamala Muditam</span>
           </div>
           <p className="font-serif-display italic text-xl text-[color:var(--sage-2)] mb-6">
