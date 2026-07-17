@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="md:col-span-5">
           <div className="flex items-center gap-3 mb-6">
             <img
-              src="/logo-lotus.webp"
+              src="/logo-lotus.png"
               alt="Kamala Muditam"
               className="w-16 h-16 object-contain"
             />
