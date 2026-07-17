@@ -14,7 +14,7 @@ export default function Footer() {
             <img
               src="/logo-lotus.webp"
               alt="Kamala Muditam"
-              className="w-11 h-11 object-contain"
+              className="w-16 h-16 object-contain"
             />
             <span className="font-serif-display text-2xl">Kamala Muditam</span>
           </div>

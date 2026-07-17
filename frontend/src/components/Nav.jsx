@@ -47,7 +47,7 @@ export default function Nav() {
           <img
             src="/logo-lotus.webp"
             alt="Kamala Muditam"
-            className="w-10 h-10 md:w-11 md:h-11 object-contain shrink-0"
+            className="w-14 h-14 md:w-16 md:h-16 object-contain shrink-0"
           />
           <span className="font-serif-display text-xl md:text-2xl tracking-tight text-forest">
             Kamala Muditam
